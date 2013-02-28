@@ -5,5 +5,6 @@ namespace SsrpClient.Messages
     {
         void Read(byte[] message);
         byte[] Write();
+        int InitialTimeout {get;}
     }
 }

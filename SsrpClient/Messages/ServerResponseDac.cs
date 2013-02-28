@@ -42,5 +42,10 @@ namespace SsrpClient.Messages
 
             return bytes.ToArray();
         }
+
+        public int InitialTimeout
+        {
+            get { throw new NotImplementedException(); }
+        }
     }
 }

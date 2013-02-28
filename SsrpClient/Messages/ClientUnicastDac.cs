@@ -42,5 +42,10 @@ namespace SsrpClient.Messages
 
             return message;
         }
+
+        public int InitialTimeout
+        {
+            get { return 1000; }
+        }
     }
 }

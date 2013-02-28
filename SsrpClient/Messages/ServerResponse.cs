@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using MiscUtil.Conversion;
@@ -21,6 +22,7 @@ namespace SsrpClient.Messages
 
             if (_responseSize + 3 != message.Length)
             {
+                Debug.WriteLine("{0} {1}", _responseSize, message.Length);
                 throw new InvalidMessageLengthException();
             }
 
@@ -50,6 +52,11 @@ namespace SsrpClient.Messages
             bytes.AddRange(encoding.GetBytes(data));
                 
             return bytes.ToArray();
+        }
+
+        public int InitialTimeout
+        {
+            get { throw new NotImplementedException(); }
         }
     }
 }

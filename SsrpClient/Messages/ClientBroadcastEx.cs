@@ -16,5 +16,10 @@ namespace SsrpClient.Messages
         {
             return new byte[] { Type };
         }
+
+        public int InitialTimeout
+        {
+            get { return 5000; }
+        }
     }
 }
